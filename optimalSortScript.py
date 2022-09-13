@@ -23,10 +23,7 @@ def merge_sort(inp):
         p = 0
         q = 0
         r = 0
- 
-        left_size = len(left_arr)
-        right_size = len(right_arr)
-        while p < left_size and q < right_size:
+        while p < len(left_arr) and q < len(right_arr):
             if left_arr[p] < right_arr[q]:
               inp[r] = left_arr[p]
               p += 1
@@ -37,12 +34,12 @@ def merge_sort(inp):
             r += 1
  
         
-        while p < left_size:
+        while p < len(left_arr):
             inp[r] = left_arr[p]
             p += 1
             r += 1
 
-        while q < right_size:
+        while q < len(right_arr):
             inp[r]=right_arr[q]
             q += 1
             r += 1
