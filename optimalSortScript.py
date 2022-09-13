@@ -1,5 +1,6 @@
 import sys       
 import fileinput
+from threading import Thread
 words_list = []
 for line in fileinput.input(files ='wordlist.txt'):
         words_list.append(line.replace("\n", "").lower())
@@ -11,8 +12,13 @@ def merge_sort(inp):
         left_arr = inp[:middle]
         right_arr = inp[middle:]
  
-        merge_sort(left_arr)
-        merge_sort(right_arr)
+        thread1 = Thread(target=merge_sort, args=(left_arr,))
+        thread2 = Thread(target=merge_sort, args=(right_arr,))
+        thread1.start()
+        thread1.join()
+
+        thread2.start()
+        thread2.join()
         
         p = 0
         q = 0
@@ -33,14 +39,13 @@ def merge_sort(inp):
         
         while p < left_size:
             inp[r] = left_arr[p]
-            print(left_arr[p])
             p += 1
             r += 1
 
         while q < right_size:
             inp[r]=right_arr[q]
-            print(right_arr[q])
             q += 1
             r += 1
             
-merge_sort(words_list) 
+merge_sort(words_list)
+print(words_list)
