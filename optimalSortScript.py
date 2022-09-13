@@ -1,7 +1,8 @@
 import sys       
+import fileinput
 words_list = []
 ascii_list = []
-for line in sys.stdin:
+for line in fileinput.input(files ='words.txt'):
         words_list.append(line.replace("\n", "").lower())
                           
 i = 0
