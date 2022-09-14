@@ -39,7 +39,7 @@ def merge_sort(inp):
 
         while q < right_size:
             inp[r]=right_arr[q]
-            print(right_arr[q])
+            print(right_arr[q] + "")
             q += 1
             r += 1
             
