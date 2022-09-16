@@ -2,7 +2,7 @@ import sys
 import fileinput
 from threading import Thread
 words_list = []
-for line in fileinput.input(files ='wordlist.txt'):
+for line in fileinput.input():
         words_list.append(line.replace("\n", "").lower())
                           
 def merge_sort(inp):
