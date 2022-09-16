@@ -37,7 +37,7 @@ def merge_sort(inp):
             p += 1
             r += 1
 
-        while q < right_size:
+        for q in range(q, right_size):
             inp[r]=right_arr[q]
             print(right_arr[q] + "")
             q += 1
