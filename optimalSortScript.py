@@ -2,7 +2,7 @@ import sys
 import fileinput
 words_list = []
 ascii_list = []
-for line in fileinput.input(files ='words.txt'):
+for line in fileinput.input():
         words_list.append(line.replace("\n", "").lower())
                           
 i = 0
