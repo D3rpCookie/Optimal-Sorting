@@ -29,7 +29,6 @@ def merge_sort(inp):
                 q += 1
              
             r += 1
- 
         
         for p in range(p, left_size):
             inp[r] = left_arr[p]
