@@ -33,13 +33,11 @@ def merge_sort(inp):
         
         while p < left_size:
             inp[r] = left_arr[p]
-            print(left_arr[p])
             p += 1
             r += 1
 
         while q < right_size:
             inp[r]=right_arr[q]
-            print(right_arr[q] + "")
             q += 1
             r += 1
             
